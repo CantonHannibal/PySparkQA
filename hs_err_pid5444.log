@@ -1,0 +1,165 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=5444, tid=0x0000000000001f00
+#
+# JRE version:  (8.0_201-b09) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.201-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000354d000):  JavaThread "Unknown thread" [_thread_in_vm, id=7936, stack(0x0000000003440000,0x0000000003540000)]
+
+Stack: [0x0000000003440000,0x0000000003540000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000000000354d000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7936, stack(0x0000000003440000,0x0000000003540000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x00000000f8000000, size: 128 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000fd580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000fd580000,0x00000000fd626670,0x00000000ff600000)
+  from space 5120K, 0% used [0x00000000ffb00000,0x00000000ffb00000,0x0000000100000000)
+  to   space 5120K, 0% used [0x00000000ff600000,0x00000000ff600000,0x00000000ffb00000)
+ ParOldGen       total 87552K, used 0K [0x00000000f8000000, 0x00000000fd580000, 0x00000000fd580000)
+  object space 87552K, 0% used [0x00000000f8000000,0x00000000f8000000,0x00000000fd580000)
+ Metaspace       used 775K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x00000000032d0000,0x0000000003320000] byte_map_base: 0x0000000002b10000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000071874ce0
+ Begin Bits: [0x0000000013230000, 0x0000000013430000)
+ End Bits:   [0x0000000013430000, 0x0000000013630000)
+
+Polling page: 0x0000000002f10000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000003640000, 0x00000000038b0000, 0x0000000012640000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.039 loading class java/lang/Short
+Event: 0.039 loading class java/lang/Short done
+Event: 0.039 loading class java/lang/Integer
+Event: 0.040 loading class java/lang/Integer done
+Event: 0.040 loading class java/lang/Long
+Event: 0.040 loading class java/lang/Long done
+Event: 0.040 loading class java/lang/NullPointerException
+Event: 0.040 loading class java/lang/NullPointerException done
+Event: 0.040 loading class java/lang/ArithmeticException
+Event: 0.040 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff6e41f0000 - 0x00007ff6e4227000 	C:\Program Files\Java\jdk1.8.0_201\bin\java.exe
+0x00007ffa71210000 - 0x00007ffa713e2000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffa6f270000 - 0x00007ffa6f31c000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffa6d710000 - 0x00007ffa6d92d000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffa6f460000 - 0x00007ffa6f502000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffa71170000 - 0x00007ffa7120e000 	C:\windows\System32\msvcrt.dll
+0x00007ffa6ebf0000 - 0x00007ffa6ec49000 	C:\windows\System32\sechost.dll
+0x00007ffa6fa70000 - 0x00007ffa6fb91000 	C:\windows\System32\RPCRT4.dll
+0x00007ffa6e910000 - 0x00007ffa6ea75000 	C:\windows\System32\USER32.dll
+0x00007ffa6d930000 - 0x00007ffa6d94e000 	C:\windows\System32\win32u.dll
+0x00007ffa6fba0000 - 0x00007ffa6fbd4000 	C:\windows\System32\GDI32.dll
+0x00007ffa6dac0000 - 0x00007ffa6dc40000 	C:\windows\System32\gdi32full.dll
+0x00007ffa61450000 - 0x00007ffa616ca000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.14393.2248_none_7ddece3683436ba6\COMCTL32.dll
+0x00007ffa6edd0000 - 0x00007ffa6f098000 	C:\windows\System32\combase.dll
+0x00007ffa6d950000 - 0x00007ffa6da45000 	C:\windows\System32\ucrtbase.dll
+0x00007ffa6da50000 - 0x00007ffa6daba000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffa6f0a0000 - 0x00007ffa6f0ce000 	C:\windows\System32\IMM32.DLL
+0x000000006ecb0000 - 0x000000006ed81000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\msvcr100.dll
+0x0000000071050000 - 0x00000000718f4000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\server\jvm.dll
+0x00007ffa6e7a0000 - 0x00007ffa6e7a8000 	C:\windows\System32\PSAPI.DLL
+0x00007ffa62930000 - 0x00007ffa62939000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffa6bbe0000 - 0x00007ffa6bc03000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007ffa62910000 - 0x00007ffa6291a000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffa6fa00000 - 0x00007ffa6fa6a000 	C:\windows\System32\WS2_32.dll
+0x0000000001370000 - 0x000000000139b000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x00007ffa6e6f0000 - 0x00007ffa6e732000 	C:\windows\System32\cfgmgr32.dll
+0x00007ffa5b1b0000 - 0x00007ffa5b1bf000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\verify.dll
+0x00007ffa59150000 - 0x00007ffa59179000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\java.dll
+0x00007ffa59130000 - 0x00007ffa59146000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xmx128m 
+java_command: org.apache.spark.launcher.Main org.apache.spark.deploy.SparkSubmit --conf spark.app.name=myApp --conf spark.master=local pyspark-shell
+java_class_path (initial): H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\activation-1.1.1.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\aircompressor-0.8.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\antlr-2.7.7.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\antlr-runtime-3.4.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\antlr4-runtime-4.7.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\aopalliance-1.0.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\aopalliance-repackaged-2.4.0-b34.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\apache-log4j-extras-1.2.17.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\apacheds-i18n-2.0.0-M15.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\apacheds-kerberos-codec-2.0.0-M15.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\api-asn1-api-1.0.0-M20.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\api-util-1.0.0-M20.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\arpack_combined_all-0.1.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\arrow-format-0.8.0.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\arrow-memory-0.8.0.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\arrow-vector-0.8.0.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\automaton-1.11-8.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\avro-1.7.7.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\avro-ipc-1.7.7.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\avro-mapred-1.7.7-hadoop2.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\base64-2.3.8.jar;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\jars\bcprov-jdk15
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_201
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_201\lib;C:\Program Files\Java\jdk1.8.0_201\lib\tools.jar;H:\hanlp(1)\hanlp\hanlp.properties
+PATH=C:\Users\Administrator\Anaconda3_2\Library\bin;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;F:\XAMPP\php;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin;C:\Users\Administrator\PycharmProjects\Pickle\venv\Scripts;C:\Program Files (x86)\Graphviz2.38\bin;C:\Program Files\Docker\Docker\resources\bin;I:\ChromeDownload\pscp.exe;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;I:\MikTex\miktex\bin\x64;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Program Files\MySQL\MySQL Server 8.0\lib;H:\spark\spark-2.3.0-bin-hadoop2.6\spark-2.3.0-bin-hadoop2.6\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\Administrator\.PyCharmCE2017.3\system\python_stubs\457808776\win32comext\shell;C:\Program Files (x86)\Graphviz2.38\bin;C:\Program Files\Bandizip\;C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Docker\Docker;F:\Microsoft VS Code\bin;C:\Users\Administrator\.dotnet\tools;I:\MikTex\miktex\bin\x64\;D:\fiddle\Fiddler;H:\IntelliJ IDEA 2018.3.4\bin;;C:\Users\Administrator\Anaconda3_2\lib\site-packages\numpy\.libs;C:\Users\Administrator\Anaconda3_2\lib\site-packages\numpy\.libs
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 14393 (10.0.14393.2214)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16683536k(4393420k free), swap 22437632k(5568k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.201-b09) for windows-amd64 JRE (1.8.0_201-b09), built on Dec 15 2018 18:36:39 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Mar 03 13:04:04 2019
+timezone: 中国标准时间
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

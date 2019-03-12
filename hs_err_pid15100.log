@@ -1,0 +1,194 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=15100, tid=0x00000000000032b0
+#
+# JRE version:  (8.0_201-b09) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.201-b09 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c457072800):  JavaThread "Unknown thread" [_thread_in_vm, id=12976, stack(0x0000004095000000,0x00000040951f0000)]
+
+Stack: [0x0000004095000000,0x00000040951f0000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000001c457072800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=12976, stack(0x0000004095000000,0x00000040951f0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 305664K, used 5242K [0x00000000d5580000, 0x00000000eaa80000, 0x0000000100000000)
+  eden space 262144K, 2% used [0x00000000d5580000,0x00000000d5a9eb90,0x00000000e5580000)
+  from space 43520K, 0% used [0x00000000e8000000,0x00000000e8000000,0x00000000eaa80000)
+  to   space 43520K, 0% used [0x00000000e5580000,0x00000000e5580000,0x00000000e8000000)
+ ParOldGen       total 699392K, used 0K [0x0000000080000000, 0x00000000aab00000, 0x00000000d5580000)
+  object space 699392K, 0% used [0x0000000080000000,0x0000000080000000,0x00000000aab00000)
+ Metaspace       used 775K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x000001c466540000,0x000001c466950000] byte_map_base: 0x000001c466140000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000077f74ce0
+ Begin Bits: [0x000001c466c00000, 0x000001c468c00000)
+ End Bits:   [0x000001c468c00000, 0x000001c46ac00000)
+
+Polling page: 0x000001c457040000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x000001c457180000, 0x000001c4573f0000, 0x000001c466180000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.030 loading class java/lang/Short
+Event: 0.030 loading class java/lang/Short done
+Event: 0.030 loading class java/lang/Integer
+Event: 0.030 loading class java/lang/Integer done
+Event: 0.030 loading class java/lang/Long
+Event: 0.030 loading class java/lang/Long done
+Event: 0.031 loading class java/lang/NullPointerException
+Event: 0.031 loading class java/lang/NullPointerException done
+Event: 0.031 loading class java/lang/ArithmeticException
+Event: 0.031 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000001c5a0000 - 0x000000001c5bc000 	H:\PycharmProjects\Pickle\venv\Scripts\python.exe
+0x00007ffdccd60000 - 0x00007ffdccf32000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007ffdccc90000 - 0x00007ffdccd3c000 	C:\windows\System32\KERNEL32.DLL
+0x00007ffdc9e80000 - 0x00007ffdca09d000 	C:\windows\System32\KERNELBASE.dll
+0x00007ffdc9ab0000 - 0x00007ffdc9ba5000 	C:\windows\System32\ucrtbase.dll
+0x0000000075c90000 - 0x0000000076024000 	H:\PycharmProjects\Pickle\venv\Scripts\python36.dll
+0x00007ffdc3730000 - 0x00007ffdc3746000 	C:\windows\SYSTEM32\VCRUNTIME140.dll
+0x00007ffdca7e0000 - 0x00007ffdca832000 	C:\windows\System32\SHLWAPI.dll
+0x00007ffdca460000 - 0x00007ffdca4fe000 	C:\windows\System32\msvcrt.dll
+0x00007ffdbc4f0000 - 0x00007ffdbc4fa000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007ffdca940000 - 0x00007ffdcac08000 	C:\windows\System32\combase.dll
+0x00007ffdcac10000 - 0x00007ffdcad31000 	C:\windows\System32\RPCRT4.dll
+0x00007ffdc9260000 - 0x00007ffdc92ca000 	C:\windows\System32\bcryptPrimitives.dll
+0x00007ffdccbb0000 - 0x00007ffdccbe4000 	C:\windows\System32\GDI32.dll
+0x00007ffdca170000 - 0x00007ffdca2f0000 	C:\windows\System32\gdi32full.dll
+0x00007ffdca2f0000 - 0x00007ffdca455000 	C:\windows\System32\USER32.dll
+0x00007ffdca0a0000 - 0x00007ffdca0be000 	C:\windows\System32\win32u.dll
+0x00007ffdccc20000 - 0x00007ffdccc8a000 	C:\windows\System32\WS2_32.dll
+0x00007ffdca5d0000 - 0x00007ffdca629000 	C:\windows\System32\sechost.dll
+0x00007ffdca500000 - 0x00007ffdca5a2000 	C:\windows\System32\ADVAPI32.dll
+0x00007ffdccbf0000 - 0x00007ffdccc1e000 	C:\windows\System32\IMM32.DLL
+0x00007ffdc8ca0000 - 0x00007ffdc8cb7000 	C:\windows\SYSTEM32\CRYPTSP.dll
+0x00007ffdc8700000 - 0x00007ffdc8733000 	C:\windows\system32\rsaenh.dll
+0x00007ffdc8db0000 - 0x00007ffdc8ddb000 	C:\windows\SYSTEM32\bcrypt.dll
+0x00007ffdc8cc0000 - 0x00007ffdc8ccb000 	C:\windows\SYSTEM32\CRYPTBASE.dll
+0x00007ffdc77a0000 - 0x00007ffdc77af000 	H:\PycharmProjects\Pickle\venv\Scripts\python3.dll
+0x0000000075c70000 - 0x0000000075c8a000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_bz2.pyd
+0x00007ffdc0a20000 - 0x00007ffdc0a62000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_lzma.pyd
+0x00007ffdb0fb0000 - 0x00007ffdb1119000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_hashlib.pyd
+0x00007ffdaa680000 - 0x00007ffdaa826000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\core\multiarray.cp36-win_amd64.pyd
+0x000000006b780000 - 0x000000006dbd7000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\.libs\libopenblas.BNVRK7633HSX7YVO2TADGR4A5KEKXJAW.gfortran-win_amd64.dll
+0x00007ffdc04d0000 - 0x00007ffdc059b000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\core\umath.cp36-win_amd64.pyd
+0x0000000075c40000 - 0x0000000075c63000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_ctypes.pyd
+0x00007ffdcc420000 - 0x00007ffdcc558000 	C:\windows\System32\ole32.dll
+0x00007ffdcc560000 - 0x00007ffdcc61f000 	C:\windows\System32\OLEAUT32.dll
+0x00007ffdc9d80000 - 0x00007ffdc9e1c000 	C:\windows\System32\msvcp_win.dll
+0x00007ffdc7790000 - 0x00007ffdc779b000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\linalg\lapack_lite.cp36-win_amd64.pyd
+0x00007ffdc09a0000 - 0x00007ffdc09c1000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\linalg\_umath_linalg.cp36-win_amd64.pyd
+0x0000000075bf0000 - 0x0000000075c34000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_decimal.pyd
+0x00007ffdc7200000 - 0x00007ffdc7218000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\fft\fftpack_lite.cp36-win_amd64.pyd
+0x00007ffdbf9d0000 - 0x00007ffdbfa81000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\random\mtrand.cp36-win_amd64.pyd
+0x0000000075bd0000 - 0x0000000075be5000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_socket.pyd
+0x0000000050000000 - 0x000000005000a000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\select.pyd
+0x00007ffda9680000 - 0x00007ffda987d000 	C:\Users\Administrator\AppData\Local\Programs\Python\Python36\DLLs\_ssl.pyd
+0x00007ffdc9bb0000 - 0x00007ffdc9d79000 	C:\windows\System32\CRYPT32.dll
+0x00007ffdc9250000 - 0x00007ffdc9260000 	C:\windows\System32\MSASN1.dll
+0x00007ffdbd210000 - 0x00007ffdbd28b000 	H:\PycharmProjects\Pickle\venv\lib\site-packages\_jpype.cp36-win_amd64.pyd
+0x00007ffdc3660000 - 0x00007ffdc370a000 	C:\windows\SYSTEM32\MSVCP140.dll
+0x0000000077750000 - 0x0000000077ff4000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\server\jvm.dll
+0x00007ffdca5c0000 - 0x00007ffdca5c8000 	C:\windows\System32\PSAPI.DLL
+0x00007ffdbbd80000 - 0x00007ffdbbd89000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007ffdc7620000 - 0x00007ffdc7643000 	C:\windows\SYSTEM32\WINMM.dll
+0x00000000508e0000 - 0x00000000509b2000 	C:\windows\SYSTEM32\MSVCR100.dll
+0x00007ffdc7380000 - 0x00007ffdc73ab000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x00007ffdc92d0000 - 0x00007ffdc9312000 	C:\windows\System32\cfgmgr32.dll
+0x00007ffdbbbf0000 - 0x00007ffdbbbff000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\verify.dll
+0x00007ffdb7e80000 - 0x00007ffdb7ea9000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\java.dll
+0x00007ffdb55f0000 - 0x00007ffdb5606000 	C:\Program Files\Java\jdk1.8.0_201\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Xms1g -Xmx2g 
+java_command: <unknown>
+java_class_path (initial): H:\PycharmProjects\Pickle\venv\lib\site-packages\pyhanlp\static\hanlp-1.7.2.jar;H:\PycharmProjects\Pickle\venv\lib\site-packages\pyhanlp\static
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_201
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_201\lib;C:\Program Files\Java\jdk1.8.0_201\lib\tools.jar;H:\hanlp(1)\hanlp\hanlp.properties
+PATH=C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files\Java\jdk1.8.0_121\jre\bin;F:\XAMPP\php;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\WINDOWS\system32;C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin;C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin;H:\PycharmProjects\Pickle\venv\Scripts;C:\Program Files (x86)\Graphviz2.38\bin;C:\Program Files\Docker\Docker\resources\bin;I:\ChromeDownload\pscp.exe;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\ProgramData\chocolatey\bin;C:\Windows\System32\WindowsPowerShell\v1.0;H:\miniConda\Scripts;C:\Program Files\Microsoft VS Code\bin;C:\Users\Administrator\AppData\Local\Programs\Python\Python36\Scripts;C:\Users\Administrator\.PyCharmCE2017.3\system\python_stubs\457808776\win32comext\shell;C:\Program Files (x86)\Graphviz2.38\bin;C:\Program Files\Bandizip\;C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin;C:\Users\Administrator\AppData\Roaming\npm;C:\Program Files\heroku\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Program Files\Docker\Docker;F:\Microsoft VS Code\bin;C:\Users\Administrator\.dotnet\tools;I:\MikTex\miktex\bin\x64\;D:\fiddle\Fiddler;H:\IntelliJ IDEA 2018.3.4\bin;;H:\PycharmProjects\Pickle\venv\lib\site-packages\pywin32_system32;H:\PycharmProjects\Pickle\venv\lib\site-packages\numpy\.libs
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 14393 (10.0.14393.2214)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 16683536k(6758156k free), swap 32312588k(5644k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.201-b09) for windows-amd64 JRE (1.8.0_201-b09), built on Dec 15 2018 18:36:39 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Mon Mar 04 15:50:24 2019
+timezone: 中国标准时间
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
